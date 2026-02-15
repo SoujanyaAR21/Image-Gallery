@@ -10,3 +10,9 @@ function openLightbox(index) {
 function closeLightbox() {
       document.getElementById('lightbox').style.display = 'none';
     }
+
+document.getElementById('lightbox').addEventListener('click', function(e) {
+      if (e.target === this || e.target === document.getElementById('lightboxImage')) {
+        closeLightbox();
+      }
+    });
