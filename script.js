@@ -6,3 +6,7 @@ function openLightbox(index) {
       document.getElementById('lightboxImage').src = galleryImages[index].src;
       document.getElementById('lightbox').style.display = 'flex';
     }
+
+function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
