@@ -16,3 +16,8 @@ document.getElementById('lightbox').addEventListener('click', function(e) {
         closeLightbox();
       }
     });
+
+function nextImage() {
+      currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+      document.getElementById('lightboxImage').src = galleryImages[currentImageIndex].src;
+    }
