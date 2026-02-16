@@ -26,3 +26,15 @@ function prevImage() {
       currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
       document.getElementById('lightboxImage').src = galleryImages[currentImageIndex].src;
     }
+
+function filterImages(category) {
+      galleryImages.forEach(img => {
+        if (category === 'all' || img.dataset.category === category) {
+          img.style.display = 'block';
+        } else {
+          img.style.display = 'none';
+        }
+      });
+    }
+
+
