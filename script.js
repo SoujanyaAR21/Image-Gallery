@@ -21,3 +21,8 @@ function nextImage() {
       currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
       document.getElementById('lightboxImage').src = galleryImages[currentImageIndex].src;
     }
+
+function prevImage() {
+      currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+      document.getElementById('lightboxImage').src = galleryImages[currentImageIndex].src;
+    }
